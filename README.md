@@ -14,6 +14,10 @@ Create the first step for fake logistics company app called FastFeet with the fo
 - Admin user CREATE
 - Recipients CREATE / UPDATE
 
+Second Step of Fastfeet implementation
+
+- Deliverymen LIST / CREATE / UPDATE / DELETE
+
 ### Instructions ###
 ```
 yarn install && yarn dev
@@ -59,5 +63,22 @@ Tools and technologies used on this project:
     "city": String,
     "state": String,
     "cep": String
+  }
+```
+
+#### Deliverymen ####
+
+| Method | Path             | Params | Body                 | Description          |
+| ------ | ---------------- | ------ | -------------------- | -------------------- |
+| GET    | /deliverymen     | -      | -                    | List all deliverymen |
+| POST   | /deliverymen     | -      | [deliveryman_object] | Create a deliveryman |
+| PUT    | /deliverymen/:id | id     | [deliveryman_object] | Edit deliveryman     |
+| DELETE | /deliverymen/:id | id     | -                    | Delete a deliveryman |
+
+```json
+  deliveryman_object = {
+    "name": String,
+    "email": String,
+    "avaitar_id": Number,
   }
 ```
